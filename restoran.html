@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lora:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./css/restoran.css">
+</head>
+<body>
+
+    <!-- Header qismini import qilish -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./image/logo.png" alt="Milliy Taomlar">
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Xush kelibsiz</a></li>
+                <li><a href="#restoran">Restoran</a></li>
+                <li><a href="#menyu">Tushlik menyusi</a></li>
+                <li><a href="#menyu">Kechki ovqat menyusi</a></li>
+                <li><a href="#kontakt">Biz bilan bog'lanish</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Restoran Bo'limi -->
+    <section id="restoran" class="restoran-section">
+        <div class="restoran-content">
+            <h2>O'zbek Milliy Taomlari</h2>
+            <p>Bizning restoranimizda O'zbekistonning eng mazali milliy taomlaridan bahramand bo'lishingiz mumkin. Osh, manti, shashlik va boshqa an'anaviy taomlarimiz sizni betakror ta'mi bilan lol qoldiradi.</p>
+            <p>Har bir taomimiz o'ziga xos usulda tayyorlanib, milliy madaniyatimizning ajralmas qismi bo'lib qolgan. Tabiiy ingredientlar va an'anaviy usullar bizning oshxonamizda asosiy o'rinni egallaydi.</p>
+            <p>Oilaviy dasturxon atrofida o'zbekcha taomlarimizni tatib ko'ring va haqiqiy milliy lazzatni his eting!</p>
+        </div>
+        <div class="restoran-image">
+            <img src="./image/restoran1.jpg" alt="O'zbek Taomlari">
+        </div>
+    </section>
+
+    <!-- Galereya Bo'limi -->
+    <section id="galereya" class="galereya-section">
+        <h2 id="typewriter">Restoran Galereyasi</h2>
+        <div class="galereya-container">
+            <div class="galereya-item">
+                <img src="./image/galery1.png" alt="Restoran Tasviri 1">
+            </div>
+            <div class="galereya-item">
+                <img src="./image/galery2.png" alt="Restoran Tasviri 2">
+            </div>
+            <div class="galereya-item">
+                <img src="./image/galery3.png" alt="Restoran Tasviri 3">
+            </div>
+            <div class="galereya-item">
+                <img src="./image/galery4.png" alt="Restoran Tasviri 4">
+            </div>
+            <div class="galereya-item">
+                <img src="./image/galery5.png" alt="Restoran Tasviri 5">
+            </div>
+            <div class="galereya-item">
+                <img src="./image/galery6.png" alt="Restoran Tasviri 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sharhlar Bo'limi -->
+    <section id="reviews" class="reviews-section">
+        <div class="review-content">
+            <p id="review-text"></p>
+            <p id="review-author"></p>
+        </div>
+        <div class="review-dots">
+            <span class="dot" onclick="currentReview(0)"></span>
+            <span class="dot" onclick="currentReview(1)"></span>
+            <span class="dot" onclick="currentReview(2)"></span>
+            <span class="dot" onclick="currentReview(3)"></span>
+            <span class="dot" onclick="currentReview(4)"></span>
+        </div>
+    </section>
+
+    <!-- Milliy Taomlar Bo'limi -->
+    <section class="business-section">
+        <div class="content-container">
+            <div class="business-name">
+                <h1>Milliy Taomlar</h1>
+                <p>An'anaviy O'zbek Oshxonalari</p>
+            </div>
+            <div class="owners">
+                <div class="owner">
+                    <p><strong>Azamat Gofurov</strong></p>
+                    <p>Sayt Egasi</p>
+                </div>
+                <div class="owner">
+                    <p><strong>Bu yerda Sizning ismingiz</strong></p>
+                    <p> Restorant Egasi</p>
+                </div>
+            </div>
+            <!-- Partnyorlar Bo'limi -->
+            <div class="partner-image">
+                <img src="./image/partner1.png" alt="Partnerlar" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontakt" class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Milliy Taomlar__AzA. Barcha huquqlar himoyalangan.</p>
+            <ul class="social-icons">
+                <li><a href="#"><img src="icon-facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="icon-instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="icon-twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./js/restoran.js"></script>
+</body>
+</html>

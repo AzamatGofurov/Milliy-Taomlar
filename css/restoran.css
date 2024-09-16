@@ -1,0 +1,502 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* Container uchun max-width qo'shish */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    width: 80px;
+    border-radius: 50px 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Restoran Bo'limi */
+.restoran-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 20px;
+    margin-top: 100px; /* Headerni hisobga olish uchun */
+    background-color: #fff;
+    border-top: 4px solid #8B0000;
+    border-bottom: 4px solid #8B0000;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.restoran-content {
+    max-width: 50%;
+}
+
+.restoran-content h2 {
+    font-size: 36px;
+    color: #8B0000;
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+}
+
+.restoran-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.restoran-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Rasmning burchaklarini yumaloqlash */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effekti uchun o'tish */
+}
+
+.restoran-image img:hover {
+    transform: scale(1.05); /* Rasmni biroz kattalashtirish */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Soyani chuqurlashtirish */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background-color: rgba(139, 0, 0, 0.9);
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        height: auto;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .restoran-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .restoran-content {
+        max-width: 100%;
+    }
+
+    .restoran-image {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .restoran-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+/* Further narrowing for very small screens */
+@media only screen and (max-width: 480px) {
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .restoran-content p {
+        font-size: 16px;
+    }
+
+    .restoran-content h2 {
+        font-size: 24px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Galereya Bo'limi */
+.galereya-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.galereya-section h2 {
+    font-size: 36px;
+    color: #8B0000;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+    border-right: 2px solid rgba(255, 255, 255, 0); /* Typewriting effekt uchun qo'shimcha uslub */
+    white-space: nowrap;
+    overflow: hidden;
+    height: 50px; /* h2 elementi uchun belgilangan balandlik */
+    display: block;
+    line-height: 50px; /* Vertikal markazlashtirish */
+}
+
+.galereya-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galereya-item {
+    flex: 1 1 calc(33.333% - 40px);
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galereya-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galereya-item:hover img {
+    transform: scale(1.1); /* Hover qilinganda rasmni kattalashtirish */
+}
+
+.galereya-item:hover {
+    transform: translateY(-10px); /* Hover qilinganda elementni biroz ko'tarish */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Hover qilinganda soyani kuchaytirish */
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .galereya-item {
+        flex: 1 1 calc(50% - 20px); /* Mobil qurilmalar uchun 2 ustunli galereya */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .galereya-item {
+        flex: 1 1 100%; /* Juda kichik ekranlar uchun 1 ustunli galereya */
+    }
+}
+
+/* Sharhlar Bo'limi */
+.reviews-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.review-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#review-text {
+    font-size: 24px;
+    font-family: 'Lora', serif;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+#review-author {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-dots {
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #8B0000;
+}
+
+/* Egasi */
+.business-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.business-name h1 {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    color: #8B0000;
+    margin: 20px;
+}
+
+.business-name p {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.owners {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.owner p {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #716b6b;
+    margin: 5px 0;
+    margin: 60px;
+}
+
+.owner strong {
+    margin-left: 60px;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+/* Partner Rasm Bo'limi */
+.partner-image {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.partner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Milliy Taomlar Bo'limi */
+.business-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Bo'limni butun ekran bo'ylab yoyish uchun */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+.business-name h1 {
+    font-family: 'Lora', serif;
+    font-size: 48px;
+    color: #8B0000;
+    margin: 0;
+}
+
+.business-name p {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.owners {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.owner p {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.owner strong {
+    font-weight: bold;
+    color: #8B0000;
+}
+
+/* Partner Rasm Bo'limi */
+.partner-image {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.partner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
