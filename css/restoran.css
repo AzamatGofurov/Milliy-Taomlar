@@ -78,7 +78,7 @@ header {
     display: none;
     cursor: pointer;
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 20px;
     z-index: 1001;
 }
@@ -200,7 +200,7 @@ header {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 40px;
+        right: 0px;
         background-color: rgba(139, 0, 0, 0.9);
         width: 100%;
         text-align: right;

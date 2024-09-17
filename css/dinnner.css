@@ -78,7 +78,7 @@ header {
     display: none;
     cursor: pointer;
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 20px;
     z-index: 1001;
 }
@@ -104,10 +104,10 @@ header {
 }
 
 /* Menyu */
-
 .dinner-section {
-    padding: 100px 0;
+    padding: 80px 0;
     background-color: #f9f9f9;
+    margin: 50px;
 }
 
 .dinner-section h2 {
@@ -117,42 +117,28 @@ header {
     margin-bottom: 50px;
     font-family: 'Lora', serif;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 .dinner-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .dinner-item {
-    width: 45%;
-    margin-bottom: 30px;
     text-align: center;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dinner-item img {
-    width: 100%;
-    height: auto;
     border-radius: 10px;
-}
-
-.dinner-item h3 {
-    font-size: 24px;
-    color: #8B0000;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-family: 'Lora', serif;
-}
-
-.dinner-item p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .dinner-item:hover {
@@ -160,11 +146,74 @@ header {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.image-container {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.dinner-item:hover .image-container img {
+    transform: scale(1.2);
+}
+
+.dinner-item h3 {
+    font-size: 24px;
+    color: #8B0000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Lora', serif;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.dinner-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Media Queries */
+@media screen and (max-width: 1024px) {
+    .dinner-menu {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
-    .dinner-item {
-        width: 100%;
-        margin-bottom: 20px;
+    .dinner-menu {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .dinner-section h2 {
@@ -180,6 +229,15 @@ header {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .dinner-section {
+        padding: 50px 10px;
+    }
+
+    .dinner-item {
+        padding: 15px;
+    }
+}
 
 
 /* Footer Styles */
@@ -234,7 +292,7 @@ header {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 40px;
+        right: 0px;
         background-color: rgba(139, 0, 0, 0.9);
         width: 100%;
         text-align: right;
