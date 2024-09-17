@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lora:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+
+    <!-- Header qismini import qilish -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./image/logo.png" alt="Milliy Taomlar">
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Xush kelibsiz</a></li>
+                <li><a href="restoran.html">Restoran</a></li>
+                <li><a href="menu.html">Tushlik menyusi</a></li>
+                <li><a href="dinner.html" >Kechki ovqat menyusi</a></li>
+                <li><a href="contact.html" class="active">Biz bilan bog'lanish</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Contact section -->
+    <main>
+        <section id="contact" class="contact-section">
+            <h2>Bog'lanish</h2>
+            <p>Iltimos, quyidagi forma orqali biz bilan bog'laning. Sizning savollaringizni kutamiz!</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Ismingiz:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Xabar:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Yuborish</button>
+            </form>
+
+            <!-- Animatsion xabar -->
+            <div id="success-message" class="success-message">
+                Xabaringiz muvaffaqiyatli yuborildi!
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="kontakt" class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Milliy Taomlar__AzA. Barcha huquqlar himoyalangan.</p>
+            <ul class="social-icons">
+                <li><a href="#"><img src="./image/icons8-facebook-100.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="./image/icons8-instagram-96.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="./image/icons8-twitter-96.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="./js/contact.js"></script>
+</body>
+</html>

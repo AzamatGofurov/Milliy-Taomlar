@@ -66,6 +66,7 @@ header {
     font-weight: bold;
     padding: 10px 20px;
     transition: background 0.3s ease, transform 0.3s ease;
+    font-family:  serif;
 }
 
 .nav-links a:hover {
