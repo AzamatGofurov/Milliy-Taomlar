@@ -70,6 +70,41 @@ header {
     transform: scale(1.1);
 }
 
+/* Navbar uslublari */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.3); /* Aktiv link fon rangi */
+    color: #FFD700; /* Aktiv link matn rangi */
+    border-radius: 5px;
+    animation: colorChange 1.5s infinite alternate;
+}
+
+/* Rang o'zgarishini animatsiya qilish */
+@keyframes colorChange {
+    0% {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #FFD700;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #FF6347; /* Rangni o'zgarishi uchun yangi rang */
+    }
+}
+
+
 .burger {
     display: none;
     cursor: pointer;
