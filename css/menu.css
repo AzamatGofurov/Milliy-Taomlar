@@ -113,6 +113,7 @@ header {
     background-position: center; /* Rasm markazda joylashishi uchun */
     background-repeat: no-repeat; /* Rasm takrorlanmasligi uchun */
     z-index: 1;
+    margin: 50px;
 }
 
 .menu-section::before {
