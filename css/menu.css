@@ -1,0 +1,347 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Container uchun max-width qo'shish */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    width: 80px;
+    border-radius: 50px 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Menyu */
+
+.menu-section {
+    position: relative;
+    padding: 100px 0;
+    background-image: url(../image/tushlikback.png); /* Bu yerda o'zingizning rasm yo'lingizni kiriting */
+    background-size: cover; /* Rasmni to'liq qoplash uchun */
+    background-position: center; /* Rasm markazda joylashishi uchun */
+    background-repeat: no-repeat; /* Rasm takrorlanmasligi uchun */
+    z-index: 1;
+}
+
+.menu-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Qoraytirish effekti uchun yarim shaffof qora qatlam */
+    z-index: -1; /* Bu qatlamni rasm va matn orqasiga qo'yish */
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Matnni overlay ustiga olib kelish */
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h3 {
+    font-size: 28px;
+    color: #ba1212; /* Sarlavhalar uchun oq rang */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Matn soyasi */
+    margin-bottom: 15px;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-category h3:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #FFFFFF; /* Oq rangli chiziq */
+    z-index: -1;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #FFFFFF; /* Matn uchun oq rang */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Matn soyasi */
+    margin-bottom: 45px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: #FFD700; /* Hover qilinganda oltin rangga o'zgaradi */
+}
+
+.dots {
+    flex: 1;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.7); /* Dots uchun oq rang */
+    margin: 0 10px;
+    position: relative;
+    height: 10px;
+}
+
+.price {
+    font-weight: bold;
+    white-space: nowrap;
+    color: #FFFFFF; /* Narxlar uchun oq rang */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Matn soyasi */
+}
+
+.description {
+    font-size: 14px;
+    color: #FFFFFF; /* Tavsif uchun oq rang */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Matn soyasi */
+    position: absolute; /* Absolut pozitsiya berildi */
+    top: 100%; /* Elementni item tagiga joylashtirish */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Tavsif fonini qora rangda yarim shaffof qilish */
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.menu-item:hover .description {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-item:hover .price {
+    color: #FFD700; /* Narx hover qilganda oltin rangda bo'ladi */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .menu-section {
+        padding: 50px 20px;
+    }
+
+    .menu-items li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dots {
+        margin: 0;
+        height: 1px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .price {
+        margin-top: 5px;
+    }
+
+    .description {
+        position: static; /* Absolut pozitsiyani mobil uchun o'chirildi */
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 10px;
+        box-shadow: none;
+        padding: 5px 0;
+        background-color: transparent; /* Mobil uchun shaffof qilib qo'yildi */
+        color: #FFFFFF;
+    }
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links.nav-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background-color: rgba(139, 0, 0, 0.9);
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        height: auto;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .menu-section {
+        padding: 50px 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
