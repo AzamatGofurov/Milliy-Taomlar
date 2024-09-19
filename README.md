@@ -2,7 +2,7 @@
 
 **Milliy Taomlar** is a website dedicated to the rich culinary traditions of Uzbekistan. Through this website, you can explore detailed information about the most delicious and popular dishes of Uzbekistan, view the restaurant atmospheres, and discover various menu types.
 
-![Milliy Taomlar](https://link_to_demo_image_or_screenshot.jpg)
+![Milliy Taomlar](https://github.com/AzamatGofurov/Milliy-Taomlar/blob/main/image/gituchun.gif)
 
 ## Technologies Used
 
