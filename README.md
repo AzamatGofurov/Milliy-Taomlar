@@ -25,3 +25,6 @@ To view or modify this project on your local machine:
 1. Clone the repository:
    ```bash
    git clone https://github.com/AzamatGofurov/Milliy-Taomlar.git
+![GitHub stars](https://img.shields.io/github/stars/AzamatGofurov/Milliy-Taomlar)
+![GitHub forks](https://img.shields.io/github/forks/AzamatGofurov/Milliy-Taomlar)
+![GitHub issues](https://img.shields.io/github/issues/AzamatGofurov/Milliy-Taomlar)
