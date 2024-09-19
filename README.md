@@ -1,32 +1,33 @@
-![GitHub stars](https://img.shields.io/github/stars/AzamatGofurov/Milliy-Taomlar)
-![GitHub forks](https://img.shields.io/github/forks/AzamatGofurov/Milliy-Taomlar)
-![GitHub issues](https://img.shields.io/github/issues/AzamatGofurov/Milliy-Taomlar)
-
 # Milliy Taomlar 🍽️
 
-**Milliy Taomlar** is a website dedicated to the rich culinary traditions of Uzbekistan. Through this website, you can explore detailed information about the most delicious and popular dishes of Uzbekistan, view the restaurant atmospheres, and discover various menu types.
+[![Project](https://img.shields.io/badge/Project-Milliy%20Taomlar-blue?style=for-the-badge)](https://github.com/AzamatGofurov/Milliy-Taomlar)
+![GitHub last commit](https://img.shields.io/github/last-commit/AzamatGofurov/Milliy-Taomlar?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/AzamatGofurov/Milliy-Taomlar?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/AzamatGofurov/Milliy-Taomlar?style=for-the-badge)
+![License MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-![Milliy Taomlar](https://github.com/AzamatGofurov/Milliy-Taomlar/blob/main/image/gituchun.gif)
+🌟 **Milliy Taomlar** - Immerse yourself in the world of Uzbekistan’s rich and flavorful **national cuisine**. Whether you're a food lover, a traveler, or just curious, this site offers a vibrant look at traditional Uzbek dishes and restaurant atmospheres. From the iconic **osh** to the delightful **shashlik**, every corner of this site brings you closer to the taste of Uzbekistan! 🍛
 
-## Technologies Used
+![Milliy Taomlar Showcase](https://github.com/AzamatGofurov/Milliy-Taomlar/blob/main/image/gituchun.gif)
 
-- **HTML5**: For structuring the website.
-- **CSS3**: For styling the website and creating responsive layouts.
-- **JavaScript**: To add interactivity, navigation, and animations.
+## 🎯 Key Features
 
-## Features
+- 📱 **Fully Responsive Design**: Ensuring the best experience on any device — **mobile**, **tablet**, and **desktop**.
+- 🍽️ **Diverse Dish Categories**: Explore Uzbekistan’s culinary gems, such as **osh**, **somsa**, **shashlik**, and many more.
+- 📸 **Restaurant Atmosphere**: Take a virtual tour through high-quality photos of traditional Uzbek restaurant settings.
+- 📖 **Menu Discovery**: Check out restaurant menus with detailed descriptions of authentic Uzbek dishes.
+- 📨 **Seamless Contact Form**: Have a question? Fill out our form, and your message will be delivered via **Telegram bot** for a quick response.
 
-- **Responsive Design**: The website is fully responsive, adapting to all screen sizes (mobile, tablet, desktop).
-- **Dish Categories**: National dishes are divided into various sections (osh, somsa, shashlik, etc.).
-- **Restaurant Atmospheres**: Photos showcasing the unique atmospheres of different restaurants.
-- **Menu Types**: Detailed information on the menus offered by restaurants.
-- **Contact Form**: Users can send messages directly through the contact form. Messages are automatically sent via a **Telegram bot**.
+## 🔧 Technologies
 
-## Installation and Usage
+- **HTML5**: Building the robust structure and layout of the website.
+- **CSS3**: Creating visually appealing styles and ensuring responsive design.
+- **JavaScript**: Enhancing interactivity and adding dynamic elements like animations and form handling.
 
-To view or modify this project on your local machine:
+## 🛠️ Getting Started
+
+To run this project locally and explore it in more detail, follow the steps below:
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/AzamatGofurov/Milliy-Taomlar.git
-
