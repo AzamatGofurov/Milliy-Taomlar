@@ -1,3 +1,7 @@
+![GitHub stars](https://img.shields.io/github/stars/AzamatGofurov/Milliy-Taomlar)
+![GitHub forks](https://img.shields.io/github/forks/AzamatGofurov/Milliy-Taomlar)
+![GitHub issues](https://img.shields.io/github/issues/AzamatGofurov/Milliy-Taomlar)
+
 # Milliy Taomlar 🍽️
 
 **Milliy Taomlar** is a website dedicated to the rich culinary traditions of Uzbekistan. Through this website, you can explore detailed information about the most delicious and popular dishes of Uzbekistan, view the restaurant atmospheres, and discover various menu types.
@@ -25,6 +29,4 @@ To view or modify this project on your local machine:
 1. Clone the repository:
    ```bash
    git clone https://github.com/AzamatGofurov/Milliy-Taomlar.git
-![GitHub stars](https://img.shields.io/github/stars/AzamatGofurov/Milliy-Taomlar)
-![GitHub forks](https://img.shields.io/github/forks/AzamatGofurov/Milliy-Taomlar)
-![GitHub issues](https://img.shields.io/github/issues/AzamatGofurov/Milliy-Taomlar)
+
